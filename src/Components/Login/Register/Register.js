@@ -1,9 +1,11 @@
 
-import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
+import { useHistory, useLocation } from 'react-router-dom';
+import './Register.css';
 import useAuth from '../../../hooks/useauth';
-import loginImg from '../../../images/login/images.png';
+import loginImg from '../../../images/login/login.png';
 
 
 
@@ -11,8 +13,8 @@ import loginImg from '../../../images/login/images.png';
 const Register = () => {
     const [loginData, setLoginData] = useState({});
     const history = useHistory();
-
     const { user, registerUser, isLoading, authError } = useAuth();
+
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -22,71 +24,42 @@ const Register = () => {
     }
     const handleLoginSubmit = e => {
         if (loginData.password !== loginData.password2) {
-            alert('Your password didnt match');
+            alert('Your password did not match');
             return
         }
-        registerUser(loginData.email, loginData.password, history);
+        registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault();
     }
     return (
-        <Container>
-            <Grid container spacing={2}>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>Login</Typography>
-                    {!isLoading && <form onSubmit={handleLoginSubmit}>
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Email"
+        <Container className="register">
 
-                            name="name"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Email"
-                            type="email"
-                            name="email"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Password"
-                            type="password"
-                            name="password"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Password"
-                            type="password"
-                            name="password2"
-                            onBlur={handleOnBlur}
-                            variant="standard" />
+            <Row>
+                <Form style={{ height: '50%', width: '50%' }} onSubmit={handleLoginSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
-                        <NavLink
-                            style={{ textDecoration: 'none' }}
-                            to="/login">
-                            <Button variant="text">Already Registered? Please Login</Button>
-                        </NavLink>
+                        <Form.Control className="login" type="text" name="name" placeholder="Enter email" onBlur={handleOnBlur} />
 
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
 
-                    </form>}
-                    {isLoading && <CircularProgress />}
-                    {user?.email && <Alert severity="success"> User Created successfully! </Alert>}
-                    {authError && <Alert severity="error">{authError}</Alert>}
-                </Grid>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <img src={loginImg} width='80%' alt="" />
-                </Grid>
-            </Grid>
+                        <Form.Control className="login" type="email" name="email" placeholder="Enter email" onBlur={handleOnBlur} />
 
-        </Container >
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+
+                        <Form.Control className="login" type="password" name="password" placeholder="Password" onBlur={handleOnBlur} />
+                    </Form.Group>
+
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+                <img style={{ height: '50%', width: '50%' }} src={loginImg} alt="" />
+            </Row>
+        </Container>
     );
 };
 
 export default Register;
+

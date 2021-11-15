@@ -58,7 +58,7 @@ const AddServices = () => {
                                 <select {...register("model")} className="p-2 m-2 w-100">
                                     <option value="premium">Honda</option>
                                     <option value="classic">Nishan</option>
-                                    <option value="business">Tata</option>
+                                    <option value="business">Toyota</option>
                                     <option value="business">BMW</option>
                                     <option value="business">Hyundai</option>
                                 </select>

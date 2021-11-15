@@ -10,6 +10,7 @@ import Register from './Components/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Explore from './Components/Explore/Explore';
 import AddServices from './Components/AddService/AddServices';
+import MyBookings from './Components/MyBookings/MyBookings';
 
 function App() {
   return (
@@ -30,6 +31,12 @@ function App() {
             <Route exact path="/addServices">
               <AddServices></AddServices>
             </Route>
+            <Route exact path="/contact">
+              <AddServices></AddServices>
+            </Route>
+            <Route exact path="/myorders">
+              <MyBookings></MyBookings>
+            </Route>
             {/* <Route exact path="/services/">
               <Services></Services>
             </Route> */}
@@ -40,6 +47,7 @@ function App() {
               <Explore />
             </Route>
           </Switch>
+
         </BrowserRouter>
       </AuthProvider>
 

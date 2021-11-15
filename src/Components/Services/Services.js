@@ -18,11 +18,11 @@ const Services = () => {
                         <div className="col-md-6 col-lg-4">
                             <div className="service p-3 border border m-2">
                                 <div className="service-img">
-                                    <img className="w-50" src={pd?.image} alt="" />
+                                    <img className="w-75" src={pd?.image} alt="" />
                                 </div>
-                                <h1>{pd.name}</h1>
+                                <h4>{pd.name}</h4>
                                 <p>{pd.description}</p>
-                                <p>{pd.price}</p>
+                                <p>TK{pd.price}</p>
                                 <Link to={`/services/${pd._id}`}>
                                     {" "}
                                     <button className="btn btn-success">Order Now</button>
