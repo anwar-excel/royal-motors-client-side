@@ -11,25 +11,24 @@ const Services = () => {
     console.log(services);
     return (
         <div>
-            <h1>Services</h1>
+            <h1>{services.length}</h1>
+            console.log(services)
             <div className="services">
                 <div className="row container">
-                    {services?.map((pd, index) => (
-                        <div className="col-md-6 col-lg-4">
-                            <div className="service p-3 border border m-2">
-                                <div className="service-img">
-                                    <img className="w-75" src={pd?.image} alt="" />
-                                </div>
-                                <h4>{pd.name}</h4>
-                                <p>{pd.description}</p>
-                                <p>TK{pd.price}</p>
-                                <Link to={`/services/${pd._id}`}>
-                                    {" "}
-                                    <button className="btn btn-success">Order Now</button>
-                                </Link>
+                    {services.map(car => <div className="col-md-6 col-lg-4">
+                        <div className="service p-3 border border m-2">
+                            <div className="service-img">
+                                <img className="w-75" src={car?.image} alt="" />
                             </div>
+                            <h4>{car.name}</h4>
+                            <p>{car.description}</p>
+                            <p>TK{car.price}</p>
+                            <Link to={`/services/${car._id}`}>
+                                {" "}
+                                <button className="btn btn-success">Order Now</button>
+                            </Link>
                         </div>
-                    ))}
+                    </div>)}
                 </div>
             </div>
         </div>
