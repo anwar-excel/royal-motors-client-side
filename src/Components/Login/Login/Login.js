@@ -43,11 +43,7 @@ const Login = () => {
 
                 <Row>
                     <Form style={{ height: '50%', width: '50%' }} onSubmit={handleLoginSubmit}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
 
-                            <Form.Control className="login" type="text" name="name" placeholder="Enter email" onBlur={handleOnBlur} />
-
-                        </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
 
                             <Form.Control className="login" type="email" name="email" placeholder="Enter email" onBlur={handleOnBlur} />
