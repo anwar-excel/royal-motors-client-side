@@ -5,7 +5,7 @@ const MyBookings = () => {
     const { user } = useFirebase();
 
     useEffect(() => {
-        fetch(`http://localhost:7000/myOrder/${user?.email}`)
+        fetch(`https://mighty-scrubland-24638.herokuapp.com/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => console.log(data));
     }, [user?.email]);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Services = () => {
+const ServicesLoad = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch("https://mighty-scrubland-24638.herokuapp.com/allServices")
@@ -36,4 +36,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default ServicesLoad;
