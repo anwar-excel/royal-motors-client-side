@@ -22,7 +22,7 @@ export default function Navigation() {
                         <Nav.Link as={Link} to="/explore">Explore</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Add Services</Nav.Link>
                         {
-                            user?.email ? <Button onClick={Logout} color="inherit">Login</Button>
+                            user?.email ? <Button onClick={Logout} color="inherit">Logout</Button>
                                 :
                                 <NavLink to="/login"><Button color="inherit">Login</Button></NavLink>
                         }

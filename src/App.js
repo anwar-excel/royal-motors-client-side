@@ -11,6 +11,7 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Explore from './Components/Explore/Explore';
 import AddServices from './Components/AddService/AddServices';
 import MyBookings from './Components/MyBookings/MyBookings';
+import Reviews from './Components/Home/Reviews/Reviews';
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
             </Route>
             <Route exact path="/explore">
               <Explore />
+            </Route>
+            <Route exact path="/reviews">
+              <Reviews />
             </Route>
           </Switch>
 

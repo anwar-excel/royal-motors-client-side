@@ -50,6 +50,10 @@ const Register = () => {
 
                         <Form.Control className="login" type="password" name="password" placeholder="Password" onBlur={handleOnBlur} />
                     </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+
+                        <Form.Control className="login" type="password" name="password2" placeholder="Password retype" onBlur={handleOnBlur} />
+                    </Form.Group>
 
                     <Button variant="primary" type="submit">
                         Submit

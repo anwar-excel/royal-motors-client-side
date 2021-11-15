@@ -15,7 +15,7 @@ const Services = () => {
 
             <div className="services">
                 <div className="row container">
-                    {services.map(car => <div className="col-md-6 col-lg-4">
+                    {services.slice(0, 6).map(car => <div className="col-md-6 col-lg-4">
                         <div className="service p-3 border border m-2">
                             <div className="service-img">
                                 <img className="w-75" src={car?.image} alt="" />
