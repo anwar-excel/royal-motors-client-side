@@ -38,7 +38,7 @@ const Login = () => {
 
 
 
-            {/* <img src={loginImg} width='80%' alt="" /> */}
+
             <Container className="login">
 
                 <Row>

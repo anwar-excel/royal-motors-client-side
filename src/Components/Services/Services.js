@@ -8,11 +8,11 @@ const Services = () => {
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, []);
-    console.log(services);
+
     return (
         <div>
-            <h1>{services.length}</h1>
-            console.log(services)
+            <h1>Our Car </h1>
+
             <div className="services">
                 <div className="row container">
                     {services.map(car => <div className="col-md-6 col-lg-4">

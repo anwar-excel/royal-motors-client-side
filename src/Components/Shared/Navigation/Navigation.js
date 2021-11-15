@@ -15,9 +15,8 @@ export default function Navigation() {
                 <Container>
                     <Navbar.Brand as={Link} to="/">Royal Motors</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link as={Link} to="/home" >Home</Nav.Link>
+
                         <Nav.Link as={Link} to="/myorders">My Orders</Nav.Link>
                         <Nav.Link as={Link} to="/register">Register</Nav.Link>
                         <Nav.Link as={Link} to="/explore">Explore</Nav.Link>

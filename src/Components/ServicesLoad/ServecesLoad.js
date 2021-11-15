@@ -14,16 +14,16 @@ const ServicesLoad = () => {
             <h1>Services</h1>
             <div className="services">
                 <div className="row container">
-                    {services?.map((pd, index) => (
+                    {services?.map((car, index) => (
                         <div className="col-md-6 col-lg-4">
                             <div className="service p-3 border border m-2">
                                 <div className="service-img">
-                                    <img className="w-75" src={pd?.image} alt="" />
+                                    <img className="w-75" src={car?.image} alt="" />
                                 </div>
-                                <h4>{pd.name}</h4>
-                                <p>{pd.description}</p>
-                                <p>TK{pd.price}</p>
-                                <Link to={`/services/${pd._id}`}>
+                                <h4>{car.name}</h4>
+                                <p>{car.description}</p>
+                                <p>TK{car.price}</p>
+                                <Link to={`/services/${car._id}`}>
                                     {" "}
                                     <button className="btn btn-success">Order Now</button>
                                 </Link>
