@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import initializeFirebase from "../Components/Login/Firebase/Firebase.init";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
-
+import axios from "axios";
 
 initializeFirebase();
 const useFirebase = () => {
@@ -74,14 +74,13 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://mighty-scrubland-24638.herokuapp.com/addUserInfo', {
-            method: method,
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-            .then()
+        console.log(email, displayName);
+        axios.post("http://localhost:7000/users", user)
+            .then(res => {
+
+            })
+
+
     }
 
 

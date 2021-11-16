@@ -13,6 +13,7 @@ import AddServices from './Components/AddService/AddServices';
 import MyBookings from './Components/MyBookings/MyBookings';
 import Reviews from './Components/Home/Reviews/Reviews';
 import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
+import MakeAdmin from './Components/DashBoard/MakeAdmin/MakeAdmin';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Register />
+            </Route>
+            <Route exact path="/makeadmin">
+              <MakeAdmin />
             </Route>
             <Route exact path="/addServices">
               <AddServices></AddServices>
