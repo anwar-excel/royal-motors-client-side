@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useauth';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
 export default function Navigation() {
-    const { user, Logout } = useAuth()
+    const { user, logout } = useAuth()
     return (
         <>
 
@@ -22,7 +21,7 @@ export default function Navigation() {
                         <Nav.Link as={Link} to="/explore">Explore</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Add Services</Nav.Link>
                         {
-                            user?.email ? <Button onClick={Logout} color="inherit">Logout</Button>
+                            user?.email ? <Button onClick={logout} color="inherit">Logout</Button>
                                 :
                                 <NavLink to="/login"><Button color="inherit">Login</Button></NavLink>
                         }

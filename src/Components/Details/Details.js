@@ -5,7 +5,9 @@ import useFirebase from '../../hooks/useFirebase';
 
 const Details = () => {
     const [service, setService] = useState({});
+
     const { user } = useFirebase();
+    console.log(user.email);
     const { serviceId } = useParams();
     console.log(serviceId);
     const {
@@ -45,6 +47,12 @@ const Details = () => {
                     </div>
                     <div className="col-md-6">
                         <form onSubmit={handleSubmit(onSubmit)}>
+                            <input
+                                {...register("name")}
+
+                                defaultValue={user?.email}
+                                className="p-2 m-2 w-100 input-field"
+                            />
                             <input
                                 {...register("name")}
                                 placeholder="Name"
