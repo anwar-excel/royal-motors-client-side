@@ -12,6 +12,7 @@ import Explore from './Components/Explore/Explore';
 import AddServices from './Components/AddService/AddServices';
 import MyBookings from './Components/MyBookings/MyBookings';
 import Reviews from './Components/Home/Reviews/Reviews';
+import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
             </Route>
             <Route exact path="/reviews">
               <Reviews />
+            </Route>
+            <Route exact path="/dashboard">
+              <DashBoard />
             </Route>
           </Switch>
 
