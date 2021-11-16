@@ -23,8 +23,8 @@ const Login = () => {
         console.log(newLoginData);
     }
     const handleLoginSubmit = e => {
-        loginUser(loginData.email, loginUser.password, location, history);
-        console.log(loginData);
+        loginUser(loginData.email, loginData.password, location, history);
+
         e.preventDefault();
     }
     const {

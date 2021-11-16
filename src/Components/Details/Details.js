@@ -19,6 +19,8 @@ const Details = () => {
 
     const onSubmit = (data) => {
         data.email = user?.email;
+        data.name = user?.displayName;
+        data.description = service?.description;
         data.status = "pending";
         fetch("https://mighty-scrubland-24638.herokuapp.com/addOrders", {
             method: "POST",
@@ -48,7 +50,7 @@ const Details = () => {
                     <div className="col-md-6">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input
-                                {...register("name")}
+                                {...register("email")}
 
                                 defaultValue={user?.email}
                                 className="p-2 m-2 w-100 input-field"

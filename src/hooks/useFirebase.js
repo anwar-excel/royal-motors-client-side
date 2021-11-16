@@ -41,6 +41,7 @@ const useFirebase = () => {
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
                 setAuthError('');
+                console.log(email, password);
             })
 
             .catch((error) => {
