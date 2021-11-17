@@ -14,12 +14,14 @@ const DashBoard = () => {
     let { path, url } = useRouteMatch();
     return (
         <div>
-            <div>
-                <Link to="/appointment"><Button color="inherit">Appointment</Button></Link>
-                <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
-                <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-                <Link to={`${url}/addstaff`}><Button color="inherit">Add Staff</Button></Link>
-            </div>
+
+            <Link to="/appointment"><Button color="inherit">Appointment</Button></Link>
+            <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
+            <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+            <Link to={`${url}/addstaff`}><Button color="inherit">Add Staff</Button></Link>
+            <Link to="/makeadmin">Make Admin</Link>
+
+
             {/* <Switch>
                 <Route exact path={path}>
                     <DashBoardHome></DashBoardHome>

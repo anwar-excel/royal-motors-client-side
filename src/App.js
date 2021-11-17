@@ -31,7 +31,7 @@ function App() {
             <Route exact path="/register">
               <Register />
             </Route>
-            <Route exact path="/makeadmin">
+            <Route exact path="/dashboard/makeadmin">
               <MakeAdmin />
             </Route>
             <Route exact path="/addServices">
