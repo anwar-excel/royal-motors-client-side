@@ -55,9 +55,9 @@ function App() {
             {/* <Route exact path="/services/">
               <Services></Services>
             </Route> */}
-            <Route exact path="/services/:serviceId">
+            <PrivateRoute exact path="/services/:serviceId">
               <Details></Details>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/explore">
               <Explore />
             </Route>
