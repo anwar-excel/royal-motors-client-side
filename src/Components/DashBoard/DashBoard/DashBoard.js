@@ -15,7 +15,7 @@ const DashBoard = () => {
     return (
         <div>
 
-            <Link to="/appointment"><Button color="inherit">Appointment</Button></Link>
+
             <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
             <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
             <Link to={`${url}/addstaff`}><Button color="inherit">Add Staff</Button></Link>
