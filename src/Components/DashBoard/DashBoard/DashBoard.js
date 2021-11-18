@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import './DashBoard.css';
 import DashBoardHome from '../DashBoardHome/DashBoardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import {
@@ -16,10 +17,12 @@ const DashBoard = () => {
         <div>
 
 
-            <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
-            <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-            <Link to={`${url}/addstaff`}><Button color="inherit">Add Staff</Button></Link>
-            <Link to="/makeadmin">Make Admin</Link>
+            <div className="left-align">
+                <Link to={`${url}`}><Button className="margin" color="inherit">Dashboard</Button></Link><br />
+                <Link to={`${url}/makeAdmin`}><Button className="margin" color="inherit">Make Admin</Button></Link><br />
+                <Link to={`${url}/addstaff`}><Button className="margin" color="inherit">Add Staff</Button></Link>
+            </div>
+
 
 
             {/* <Switch>

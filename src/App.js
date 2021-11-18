@@ -14,6 +14,8 @@ import MyBookings from './Components/MyBookings/MyBookings';
 import Reviews from './Components/Home/Reviews/Reviews';
 import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import MakeAdmin from './Components/DashBoard/MakeAdmin/MakeAdmin';
+import AddStaff from './Components/DashBoard/AddStaff/AddStaff';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -33,6 +35,12 @@ function App() {
             </Route>
             <Route exact path="/dashboard/makeadmin">
               <MakeAdmin />
+            </Route>
+            <Route exact path="/dashboard/addstaff">
+              <AddStaff />
+            </Route>
+            <Route exact path="/dashboard/addstaff/:staffId">
+              <AddStaff />
             </Route>
             <Route exact path="/addServices">
               <AddServices></AddServices>
@@ -59,7 +67,7 @@ function App() {
               <DashBoard />
             </Route>
           </Switch>
-
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
 

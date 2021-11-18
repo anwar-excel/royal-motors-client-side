@@ -1,0 +1,14 @@
+.footer{
+    background-color: #cfd1d8;
+    padding: 15px;
+   
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .btn{
+      background-color: rgb(52, 56, 55);
+      margin-top: 10px;
+  }
