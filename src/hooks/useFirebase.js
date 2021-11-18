@@ -87,7 +87,7 @@ const useFirebase = () => {
     // const saveUser = (email, displayName, method) => {
     //     const user = { email, displayName };
     //     console.log(email, displayName);
-    //     axios.post("http://localhost:7000/users", user)
+    //     axios.post("https://mighty-scrubland-24638.herokuapp.com/users", user)
     //         .then(res => {
 
     //         })

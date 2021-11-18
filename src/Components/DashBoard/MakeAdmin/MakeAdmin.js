@@ -79,11 +79,13 @@ const MakeAdmin = () => {
             body: JSON.stringify(user)
         })
             .then(res => res.json())
+
             .then(data => {
-                if (data.modifiedCount) {
-                    console.log(data);
-                    setSuccess(true);
-                }
+                console.log(data);
+                // if (data.modifiedCount) {
+                //     console.log(data);
+                //     setSuccess(true);
+                // }
             })
 
         e.preventDefault()
