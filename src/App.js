@@ -16,6 +16,7 @@ import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import MakeAdmin from './Components/DashBoard/MakeAdmin/MakeAdmin';
 import AddStaff from './Components/DashBoard/AddStaff/AddStaff';
 import Footer from './Components/Footer/Footer';
+import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -42,12 +43,12 @@ function App() {
             <Route exact path="/dashboard/addstaff/:staffId">
               <AddStaff />
             </Route>
-            <Route exact path="/addServices">
+            <PrivateRoute exact path="/addServices">
               <AddServices></AddServices>
-            </Route>
-            <Route exact path="/contact">
+            </PrivateRoute>
+            <PrivateRoute exact path="/contact">
               <AddServices></AddServices>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/myorders">
               <MyBookings></MyBookings>
             </Route>
@@ -63,9 +64,9 @@ function App() {
             <Route exact path="/reviews">
               <Reviews />
             </Route>
-            <Route exact path="/dashboard">
+            <PrivateRoute exact path="/dashboard">
               <DashBoard />
-            </Route>
+            </PrivateRoute>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>
